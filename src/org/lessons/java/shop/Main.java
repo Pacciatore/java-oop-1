@@ -8,9 +8,9 @@ public class Main {
 	public static void main(String[] args) {
 
 		DecimalFormat df = new DecimalFormat("0.00");
-		df.setRoundingMode(RoundingMode.CEILING);
+		df.setRoundingMode(RoundingMode.HALF_EVEN);
 
-		Prodotto mela = new Prodotto("Mela", "Una bellissima mela rossa.", 1f, 4);
+		Prodotto mela = new Prodotto("Mela", "Una bellissima mela rossa.", .6f, 4);
 
 		System.out.println("Ecco il tuo prodotto: " + mela.getLongName());
 		System.out.println("Descrizione: " + mela.description);

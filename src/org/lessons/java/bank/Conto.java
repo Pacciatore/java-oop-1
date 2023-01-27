@@ -1,5 +1,8 @@
 package org.lessons.java.bank;
 
+import java.math.RoundingMode;
+import java.text.DecimalFormat;
+
 public class Conto {
 
 	int accountNumber;
@@ -16,6 +19,15 @@ public class Conto {
 		this.accountNumber = _accountNumber;
 		this.accountName = _accountName;
 		this.balance = 0f;
+	}
+
+	public String formattedBalance() {
+
+		DecimalFormat df = new DecimalFormat("0.00");
+		df.setRoundingMode(RoundingMode.HALF_EVEN);
+
+		return df.format(this.balance);
+
 	}
 
 }

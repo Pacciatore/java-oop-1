@@ -5,7 +5,7 @@ import java.text.DecimalFormat;
 
 public class Conto {
 
-	int accountNumber;
+	private int accountNumber;
 	String accountName;
 	float balance;
 
@@ -28,6 +28,10 @@ public class Conto {
 
 		return df.format(this.balance);
 
+	}
+
+	public int getAccountNumber() {
+		return this.accountNumber;
 	}
 
 }

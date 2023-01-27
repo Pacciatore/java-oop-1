@@ -8,7 +8,7 @@ public class Bank {
 
 		System.out.println("Informazione del conto di: " + francoBank.accountName);
 		System.out.println();
-		System.out.println("Codice c/c: " + francoBank.accountNumber);
+		System.out.println("Codice c/c: " + francoBank.getAccountNumber());
 		System.out.println("Saldo: " + francoBank.formattedBalance() + "€");
 
 		System.out.println();
@@ -19,7 +19,7 @@ public class Bank {
 
 		System.out.println("Informazione del conto di: " + paoloBank.accountName);
 		System.out.println();
-		System.out.println("Codice c/c: " + paoloBank.accountNumber);
+		System.out.println("Codice c/c: " + paoloBank.getAccountNumber());
 		System.out.println("Saldo: " + paoloBank.formattedBalance() + "€");
 
 	}

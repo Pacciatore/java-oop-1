@@ -11,39 +11,39 @@ public class Prodotto {
 	int vat;
 
 	public Prodotto(String _name, String _description, float _price, int _vat) {
-		id = getRandomID();
-		name = _name;
-		description = _description;
-		price = _price;
-		vat = _vat;
+		this.id = getRandomID();
+		this.name = _name;
+		this.description = _description;
+		this.price = _price;
+		this.vat = _vat;
 	}
 
 	private int getRandomID() {
 
 		Random r = new Random();
 
-		int randomID = r.nextInt(100);
+		int randomID = r.nextInt(100000000);
 
 		return randomID;
 	}
 
 	public float getBasePrice() {
-		return price;
+		return this.price;
 	}
 
 	public float getVatPrice() {
 
 		float vatPercentage = (float) vat / 100;
-		float vatCost = price * vatPercentage;
+		float vatCost = this.price * vatPercentage;
 
-		float vatPrice = price + vatCost;
+		float vatPrice = this.price + vatCost;
 
 		return vatPrice;
 	}
 
 	public String getLongName() {
 
-		StringBuilder longName = new StringBuilder(id + "-" + name.toLowerCase());
+		StringBuilder longName = new StringBuilder(this.id + "-" + this.name.toLowerCase());
 
 		return longName.toString();
 	}

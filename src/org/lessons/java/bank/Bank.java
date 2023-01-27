@@ -75,13 +75,15 @@ public class Bank {
 		float depositAmount = 0f;
 
 		System.out.println("------------------------------------");
+		System.out.println();
 		System.out.print("Inserire l'importo da versare: ");
-		depositAmount = s.nextFloat();
-		s.hasNextLine();
+		depositAmount = Float.parseFloat(s.nextLine());
 
+		System.out.println();
 		System.out.println("Deposito di " + depositAmount + "€");
-
 		account.deposit(depositAmount);
+		System.out.println("Saldo: " + account.formattedBalance() + "€");
+		System.out.println();
 
 	}
 
@@ -90,8 +92,9 @@ public class Bank {
 
 		System.out.println("-------------------------------------");
 		System.out.print("Inserire l'importo da prelevare: ");
-		withdrawAmount = s.nextFloat();
-		s.nextLine();
+		withdrawAmount = Float.parseFloat(s.nextLine());
+
+		System.out.println();
 
 		if (account.withdraw(withdrawAmount)) {
 			System.out.println("Prelievo effetuato correttamente.");
@@ -99,6 +102,8 @@ public class Bank {
 		} else {
 			System.out.println("Impossibile effettuare il prelievo.");
 		}
+
+		System.out.println();
 	}
 
 }

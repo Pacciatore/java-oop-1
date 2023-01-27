@@ -15,12 +15,9 @@ public class Bank {
 		System.out.println("--------------------------------------------------------");
 		System.out.println();
 
-		Conto paoloBank = new Conto(55, "Paolo Bianchi", 1523.1f);
+		francoBank.deposit(2000f);
 
-		System.out.println("Informazione del conto di: " + paoloBank.accountName);
-		System.out.println();
-		System.out.println("Codice c/c: " + paoloBank.getAccountNumber());
-		System.out.println("Saldo: " + paoloBank.formattedBalance() + "€");
+		System.out.println("Nuovo saldo: " + francoBank.formattedBalance());
 
 	}
 

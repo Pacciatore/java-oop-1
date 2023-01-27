@@ -34,4 +34,8 @@ public class Conto {
 		return this.accountNumber;
 	}
 
+	public void deposit(float money) {
+		this.balance += money;
+	}
+
 }

@@ -2,6 +2,7 @@ package org.lessons.java.bank;
 
 import java.math.RoundingMode;
 import java.text.DecimalFormat;
+import java.util.Random;
 
 public class Conto {
 
@@ -9,14 +10,14 @@ public class Conto {
 	String accountName;
 	float balance;
 
-	public Conto(int _accountNumber, String _accountName, float _balance) {
-		this.accountNumber = _accountNumber;
+	public Conto(String _accountName, float _balance) {
+		this.accountNumber = this.getRandomInt();
 		this.accountName = _accountName;
 		this.balance = _balance;
 	}
 
-	public Conto(int _accountNumber, String _accountName) {
-		this.accountNumber = _accountNumber;
+	public Conto(String _accountName) {
+		this.accountNumber = this.getRandomInt();
 		this.accountName = _accountName;
 		this.balance = 0f;
 	}
@@ -28,6 +29,13 @@ public class Conto {
 
 		return df.format(this.balance);
 
+	}
+
+	public int getRandomInt() {
+
+		Random r = new Random();
+
+		return r.nextInt(999) + 1;
 	}
 
 	public int getAccountNumber() {

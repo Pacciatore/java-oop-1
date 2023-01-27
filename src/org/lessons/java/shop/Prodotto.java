@@ -18,7 +18,7 @@ public class Prodotto {
 		vat = _vat;
 	}
 
-	int getRandomID() {
+	private int getRandomID() {
 
 		Random r = new Random();
 

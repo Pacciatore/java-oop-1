@@ -36,7 +36,7 @@ public class Bank {
 			switch (choice) {
 
 			case 1:
-				System.out.println("Versamento");
+				deposit(s, bankAccount);
 				break;
 
 			case 2:
@@ -48,13 +48,27 @@ public class Bank {
 				break;
 
 			default:
-				System.out.println("Inserire il numero dell'operazione da eseguire.");
+				System.out.println("Inserire un numero compreso tra 1 e 3.");
 				break;
 			}
 
 		} while (choice != 3);
 
 		s.close();
+
+	}
+
+	public static void deposit(Scanner s, Conto account) {
+		float depositAmount = 0f;
+
+		System.out.println("------------------------------------");
+		System.out.print("Inserire l'importo da versare: ");
+		depositAmount = s.nextFloat();
+		s.hasNextLine();
+
+		System.out.println("Deposito di " + depositAmount + "€");
+
+		account.deposit(depositAmount);
 
 	}
 

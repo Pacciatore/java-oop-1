@@ -38,4 +38,12 @@ public class Conto {
 		this.balance += money;
 	}
 
+	public boolean withdraw(float money) {
+		if (money <= this.balance) {
+			this.balance -= money;
+			return true;
+		}
+		return false;
+	}
+
 }

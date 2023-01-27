@@ -12,6 +12,8 @@ public class Main {
 
 		Prodotto mela = new Prodotto("Mela", "Una bellissima mela rossa.", .6f, 4);
 
+		System.out.println("ID con 8 cifre: " + mela.getPaddedID());
+
 		System.out.println("Ecco il tuo prodotto: " + mela.getLongName());
 		System.out.println("Descrizione: " + mela.description);
 		System.out.println("Prezzo: " + df.format(mela.getBasePrice()) + "€");

@@ -22,7 +22,7 @@ public class Prodotto {
 
 		Random r = new Random();
 
-		int randomID = r.nextInt(100000000);
+		int randomID = r.nextInt(10000000);
 
 		return randomID;
 	}
@@ -46,6 +46,13 @@ public class Prodotto {
 		StringBuilder longName = new StringBuilder(this.id + "-" + this.name.toLowerCase());
 
 		return longName.toString();
+	}
+
+	public String getPaddedID() {
+
+		String paddedID = String.format("%08d", this.id);
+
+		return paddedID;
 	}
 
 }

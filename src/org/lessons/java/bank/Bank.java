@@ -40,7 +40,8 @@ public class Bank {
 				break;
 
 			case 2:
-				System.out.println("Prelievo");
+				withdraw(s, bankAccount);
+				;
 				break;
 
 			case 3:
@@ -70,6 +71,22 @@ public class Bank {
 
 		account.deposit(depositAmount);
 
+	}
+
+	public static void withdraw(Scanner s, Conto account) {
+		float withdrawAmount = 0f;
+
+		System.out.println("-------------------------------------");
+		System.out.print("Inserire l'importo da prelevare: ");
+		withdrawAmount = s.nextFloat();
+		s.nextLine();
+
+		if (account.withdraw(withdrawAmount)) {
+			System.out.println("Prelievo effetuato correttamente.");
+			System.out.println("Nuovo saldo: " + account.formattedBalance() + "€");
+		} else {
+			System.out.println("Impossibile effettuare il prelievo.");
+		}
 	}
 
 }

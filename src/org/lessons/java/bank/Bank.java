@@ -15,11 +15,25 @@ public class Bank {
 		Conto bankAccount = new Conto(inputName);
 
 		System.out.println("---------------------------------------");
+
+		accountInfo(bankAccount);
+
+		menu(s, bankAccount);
+
+		s.close();
+
+	}
+
+	public static void accountInfo(Conto bankAccount) {
 		System.out.println("Riepilogo conto");
 		System.out.println();
 		System.out.println("Nome: " + bankAccount.accountName);
 		System.out.println("Numero conto: " + bankAccount.getAccountNumber());
 		System.out.println("Saldo: " + bankAccount.formattedBalance() + "€");
+		System.out.println();
+	}
+
+	public static void menu(Scanner s, Conto bankAccount) {
 
 		int choice = 0;
 
@@ -54,8 +68,6 @@ public class Bank {
 			}
 
 		} while (choice != 3);
-
-		s.close();
 
 	}
 

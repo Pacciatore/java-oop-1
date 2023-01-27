@@ -27,4 +27,18 @@ public class Prodotto {
 		return randomID;
 	}
 
+	public float getBasePrice() {
+		return price;
+	}
+
+	public float getVatPrice() {
+
+		float vatPercentage = (float) vat / 100;
+		float vatCost = price * vatPercentage;
+
+		float vatPrice = price + vatCost;
+
+		return vatPrice; // To round 2 decimals
+	}
+
 }

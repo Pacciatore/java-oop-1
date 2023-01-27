@@ -8,8 +8,10 @@ public class Main {
 
 		System.out.println("Ecco il tuo prodotto: " + mela.name + " | Codice: " + mela.id);
 		System.out.println("Descrizione: " + mela.description);
-		System.out.println("Prezzo: " + mela.price + "€");
+		System.out.println("Prezzo: " + mela.getBasePrice() + "€");
+
 		System.out.println("IVA: " + mela.vat + "%");
+		System.out.println("Prezzo comprensivo di IVA: " + mela.getVatPrice() + "€");
 
 	}
 

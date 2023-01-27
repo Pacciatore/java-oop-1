@@ -1,5 +1,7 @@
 package org.lessons.java.shop;
 
+import java.util.Random;
+
 public class Prodotto {
 
 	int id;
@@ -8,12 +10,21 @@ public class Prodotto {
 	float price;
 	int vat;
 
-	public Prodotto(int _id, String _name, String _description, float _price, int _vat) {
-		id = _id; // To define getRandomID()
+	public Prodotto(String _name, String _description, float _price, int _vat) {
+		id = getRandomID();
 		name = _name;
 		description = _description;
 		price = _price;
 		vat = _vat;
+	}
+
+	int getRandomID() {
+
+		Random r = new Random();
+
+		int randomID = r.nextInt(100);
+
+		return randomID;
 	}
 
 }

@@ -41,4 +41,11 @@ public class Prodotto {
 		return vatPrice; // To round 2 decimals
 	}
 
+	public String getLongName() {
+
+		StringBuilder longName = new StringBuilder(id + "-" + name.toLowerCase());
+
+		return longName.toString();
+	}
+
 }

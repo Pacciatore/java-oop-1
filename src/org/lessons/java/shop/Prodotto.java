@@ -38,7 +38,7 @@ public class Prodotto {
 
 		float vatPrice = price + vatCost;
 
-		return vatPrice; // To round 2 decimals
+		return vatPrice;
 	}
 
 	public String getLongName() {
